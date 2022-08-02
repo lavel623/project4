@@ -13,6 +13,6 @@ public class RestaurantourServiceClient {
 				(RestaurantourService) container.getBean("restaurantService");
 		
 		RestaurantourVO rvo = new RestaurantourVO();
-		rvo.set
+		
 	}
 }
