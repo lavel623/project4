@@ -14,6 +14,6 @@
 		</bean>
 				
 		
-		<bean id="login" class="com.springbook.view.user.LoginController"></bean>				
+		<bean id="login" class="com.project4.trip.view.user.LoginController"></bean>				
 				
 </beans>
