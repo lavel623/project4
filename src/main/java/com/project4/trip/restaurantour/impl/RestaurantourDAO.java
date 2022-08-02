@@ -9,10 +9,10 @@ public class RestaurantourDAO {
 	public void insertRestaurantour() {}
 	public void updateRestaurantour () {}
 	public void deleteRestaurantour () {}
-	public RestaurantourVO getRestaurantour () {
-		return new RestaurantourVO();
+	public RestaurantourVO getRestaurantour (RestaurantourVO restaurantourVO) {
+		return restaurantourVO;
 	}
 	public List<RestaurantourVO> getRestaurantourList () {
-		return new List<RestaurantourVO>();
+		return List<RestaurantourVO>();
 	}
 }
