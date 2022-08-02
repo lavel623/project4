@@ -15,7 +15,7 @@ db.properties
 .loadpath
 .recommenders
 .classpath
-/MANIFEST.MF
+MANIFEST.MF
 pom.properties
 
 # External tool builders
