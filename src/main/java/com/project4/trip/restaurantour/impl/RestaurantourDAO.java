@@ -12,7 +12,7 @@ public class RestaurantourDAO {
 	public RestaurantourVO getRestaurantour (RestaurantourVO restaurantourVO) {
 		return restaurantourVO;
 	}
-	public List<RestaurantourVO> getRestaurantourList () {
-		return List<RestaurantourVO>();
+	public List<RestaurantourVO> getRestaurantourList (RestaurantourVO restaurantourVO) {
+		return List<RestaurantourVO>(restaurantourVO);
 	}
 }

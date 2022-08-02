@@ -24,7 +24,7 @@ public class RestaurantourServiceImpl {
 	}
 	
 	public RestaurantourVO getRestaurantour(RestaurantourVO rvo) {
-		return restaurantourDAO.getRestaurantour();
+		return restaurantourDAO.getRestaurantour(rvo);
 	}
 	
 	public List<RestaurantourVO> getRestaurantourList(RestaurantourVO rvo) {
