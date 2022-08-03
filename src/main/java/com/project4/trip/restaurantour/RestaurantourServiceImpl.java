@@ -3,11 +3,12 @@ package com.project4.trip.restaurantour;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.project4.trip.restaurantour.impl.RestaurantourDAO;
 
-
-public class RestaurantourServiceImpl {
+@Service("restaurantourService")
+public class RestaurantourServiceImpl implements RestaurantourService {
 	@Autowired
 	private RestaurantourDAO rdao;
 	

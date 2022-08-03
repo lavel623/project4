@@ -4,11 +4,15 @@ package com.project4.trip.restaurantour.impl;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.project4.trip.restaurantour.RestaurantourVO;
 
+@Repository
 public class RestaurantourDAO {
 	
+	@Autowired
 	private SqlSessionTemplate mybatis;
 	
 	public void insertRestaurantour(RestaurantourVO rvo) {
