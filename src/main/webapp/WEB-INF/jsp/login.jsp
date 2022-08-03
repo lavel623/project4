@@ -9,9 +9,15 @@
 <body>
 	<center>
 		<form action="login.do" method="post">
-			<table border="1" cellpadding="0" cellspacing="0">
+			<table border= "2px" solid #000; cellpadding="0" cellspacing="0">
 				<tr>
-					<td style= bgcolor="black" font-color="white"></td>
+					<td style= bgcolor="black" color="white">아이디</td>
+					<td><input type="text">ID</td>
+				</tr>
+				
+				<tr>
+					<td style= bgcolor="black" color="white">비밀번호</td>
+					<td><input type="password">PW</td>
 				</tr>
 			</table>
 		</form>
