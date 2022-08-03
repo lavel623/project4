@@ -3,9 +3,13 @@
 								"http://mybatis.org/dtd/mybatis-3-config.dtd">
 								
 <configuration>
+
+	<!-- Properties 파일 설정 -->
+	<properties resource="db.properties" />
+	
 	<!-- Alias 설정 -->
 	<typeAliases>
-		<typeAlias alias="board" type="com.project4.trip.restaurantour.RestaurantourVO" />
+		<typeAlias alias="restaurantour" type="com.project4.trip.restaurantour.RestaurantourVO" />
 	</typeAliases>
 	
 	<!-- Sql Mapper 설정 -->
