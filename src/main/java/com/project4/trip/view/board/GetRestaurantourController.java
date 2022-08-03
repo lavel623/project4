@@ -32,12 +32,19 @@ public class GetRestaurantourController {
 	}
 	
 	// 명소/맛집 상세 조회
-	@RequestMapping("getRestaurantour.do")
+	@RequestMapping("/getRestaurantour.do")
 	public ModelAndView getRestaurantour(RestaurantourVO rvo,
 			RestaurantourDAO rdao, ModelAndView mav) {
-	
 		mav.addObject("restaurantour", rdao.getRestaurantour(rvo)); // Model 정보 저장
 		mav.setViewName("getRestaurantour.jsp"); // View 정보 저장
+		return mav;
+	}
+	
+	@RequestMapping("/getRestaurantourList.do")
+	public ModelAndView getRestaurantourList(RestaurantourVO rvo,
+		RestaurantourDAO rdao, ModelAndView mav) {
+		mav.addObject("restaurantourList", rdao.getRestaurantourList(rvo)); // Model 정보 저장
+		mav.setViewName("getRestaurantourList.jsp"); // View 정보 저장
 		return mav;
 	}
 }

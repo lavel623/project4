@@ -3,19 +3,32 @@ package com.project4.trip.restaurantour.impl;
 
 import java.util.List;
 
+import org.mybatis.spring.SqlSessionTemplate;
+
 import com.project4.trip.restaurantour.RestaurantourVO;
 
 public class RestaurantourDAO {
 	
-	private SqlSession mybatis;
+	private SqlSessionTemplate mybatis;
 	
-	public void insertRestaurantour(RestaurantourVO rvo) {}
-	public void updateRestaurantour(RestaurantourVO rvo) {}
-	public void deleteRestaurantour(RestaurantourVO rvo) {}
-	public RestaurantourVO getRestaurantour (RestaurantourVO restaurantourVO) {
-		return restaurantourVO;
+	public void insertRestaurantour(RestaurantourVO rvo) {
+		System.out.println("insertRes 기능 처리중");
+		mybatis.insert("RestaurantourDAO.insertRestaurantour", rvo);
 	}
-	public List<RestaurantourVO> getRestaurantourList (RestaurantourVO restaurantourVO) {
-		return List<RestaurantourVO>(restaurantourVO);
+	public void updateRestaurantour(RestaurantourVO rvo) {
+		System.out.println("updateRes 기능 처리중");
+		mybatis.update("RestaurantourDAO.updateRestaurantour", rvo);
+	}
+	public void deleteRestaurantour(RestaurantourVO rvo) {
+		System.out.println("deleteRes 기능 처리중");
+		mybatis.delete("RestaurantourDAO.deleteRestaurantour", rvo);
+	}
+	public RestaurantourVO getRestaurantour (RestaurantourVO rvo) {
+		System.out.println("getRes 기능 처리중");
+		return (RestaurantourVO)mybatis.selectOne("RestaurantourDAO.getRestaurantour", rvo);
+	}
+	public List<RestaurantourVO> getRestaurantourList (RestaurantourVO rvo) {
+		System.out.println("getResList 기능 처리중");
+		return mybatis.selectList("BoardDAO.getBoardList", rvo);
 	}
 }

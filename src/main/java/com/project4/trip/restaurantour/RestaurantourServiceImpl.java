@@ -9,25 +9,25 @@ import com.project4.trip.restaurantour.impl.RestaurantourDAO;
 
 public class RestaurantourServiceImpl {
 	@Autowired
-	private RestaurantourDAO restaurantourDAO;
+	private RestaurantourDAO rdao;
 	
 	public void insertRestaurantour(RestaurantourVO rvo) {
-		restaurantourDAO.insertRestaurantour();
+		rdao.insertRestaurantour(rvo);
 	}
 	
 	public void updateRestaurantour(RestaurantourVO rvo) {
-		restaurantourDAO.updateRestaurantour();
+		rdao.updateRestaurantour(rvo);
 	}
 	
 	public void deleteRestaurantour(RestaurantourVO rvo) {
-		restaurantourDAO.deleteRestaurantour();
+		rdao.deleteRestaurantour(rvo);
 	}
 	
 	public RestaurantourVO getRestaurantour(RestaurantourVO rvo) {
-		return restaurantourDAO.getRestaurantour(rvo);
+		return rdao.getRestaurantour(rvo);
 	}
 	
 	public List<RestaurantourVO> getRestaurantourList(RestaurantourVO rvo) {
-		return restaurantourDAO.getRestaurantourList();
+		return rdao.getRestaurantourList(rvo);
 	}
 }
