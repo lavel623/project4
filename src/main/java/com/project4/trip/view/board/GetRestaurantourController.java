@@ -1,29 +1,43 @@
 package com.project4.trip.view.board;
 
-import java.util.List;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import com.project4.trip.restaurantour.RestaurantourVO;
 import com.project4.trip.restaurantour.impl.RestaurantourDAO;
 
+@Controller
 public class GetRestaurantourController {
 	
-	public String handleRequest(HttpServletRequest request,
-								HttpServletResponse response) {
-		System.out.println("글 상세 조회 처리");
+	// 명소/맛집 등록
+	@RequestMapping("/insertRestaurantour.do")
+	public String insertRestaurantour(RestaurantourVO rvo, RestaurantourDAO rdao) {
+		rdao.insertRestaurantour(rvo);
+		return "getRestaurantourList.do";
+	}
 	
-		String seq = request.getParameter("seq");
-		
-		RestaurantourVO rvo = new RestaurantourVO();
-		rvo.setSeq(Integer.parseInt(seq));
-		
-		RestaurantourDAO rdao = new RestaurantourDAO();
-		RestaurantourVO restaurantour = rdao.getRestaurantour(rvo);
-		
-		HttpSession session = request.getSession();
-		session.setAttribute("restaurantour", restaurantour);
-		return "getRestaurantour";
-		}
+	// 명소/맛집 수정
+	@RequestMapping("/updateRestaurantour.do")
+	public String updateRestaurantour(RestaurantourVO rvo, RestaurantourDAO rdao) {
+		rdao.updateRestaurantour(rvo);
+		return "getRestaurantourList.do";
+	}
+	
+	// 명소/맛집 삭제
+	@RequestMapping("/deleteRestaurantour.do")
+	public String deleteRestaurantour(RestaurantourVO rvo, RestaurantourDAO rdao) {
+		rdao.deleteRestaurantour(rvo);
+		return "getRestaurantourList.do";
+	}
+	
+	// 명소/맛집 상세 조회
+	@RequestMapping("getRestaurantour.do")
+	public ModelAndView getRestaurantour(RestaurantourVO rvo,
+			RestaurantourDAO rdao, ModelAndView mav) {
+	
+		mav.addObject("restaurantour", rdao.getRestaurantour(rvo)); // Model 정보 저장
+		mav.setViewName("getRestaurantour.jsp"); // View 정보 저장
+		return mav;
+	}
 }
