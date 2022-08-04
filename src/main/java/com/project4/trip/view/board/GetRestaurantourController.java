@@ -4,12 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.project4.trip.restaurantour.RestaurantourService;
 import com.project4.trip.restaurantour.RestaurantourVO;
 import com.project4.trip.restaurantour.impl.RestaurantourDAO;
 
 @Controller
+@SessionAttributes("restaurantour")
 public class GetRestaurantourController {
 	
 	@Autowired

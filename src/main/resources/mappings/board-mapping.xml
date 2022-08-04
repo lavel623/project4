@@ -3,13 +3,49 @@
 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 	
-<mapper>
-	<insert id="insertRestaurantourDAO">
-		insert into restaurantour(division, region, location, marketname, explanation)
-		values( #{division}, #{region}, #{location}, #{marketname}, #{explanation})
+<mapper namespace="RestaurantourDAO">
+
+	<resultMap id="restaurantourResult" type="restaurantour">
+		<id property="seq" column="SEQ" />
+		<result property="division" column="DIVISION" />
+		<result property="region" column="REGION" />
+		<result property="location" column="LOCATION" />
+		<result property="marketname" column="MARKETNAME" />
+		<result property="explanation" column="EXPLANATION" />
+		<result property="photo" column="PHOTO" />
+	</resultMap>
+	
+	<insert id="insertRestaurantour" parameterType="restaurantour">
+		<![CDATA[
+			insert into restaurantour(division, region, locaion, marketname, explanation,
+			photo) value( #{division}, #{region}, #{location}, #{marketname}, #{explanation},
+			#{photo} )
+		]]>
 	</insert>
 	
 	<update id="updateRestaurantour">
-	
+		<![CDATA[
+		update restaurantour set division=#{division}, region=#{region}, location=#{location},
+			marketname=#{marketname}, explanation=#{explanation} where seq=#{seq}
+			]]>
 	</update>
+	
+	<delete id="deleteRestaurantour">
+		<![CDATA[
+		delete restaurantour where seq=#{seq}
+		]]>
+	</delete>
+	
+	<select id="getRestaurantour" resultType="restaurantour">
+		<![CDATA[
+		select * from restaurantour where seq=#{seq}
+		]]>
+	</select>
+	
+	<select id="getRestaurantourList" resultType="restaurantour">
+		<![CDATA[
+		select * from restaurantour where seq like '%'||#{searchkeyword}||'%'
+		order by seq desc
+		]]>
+	</select>
 </mapper>

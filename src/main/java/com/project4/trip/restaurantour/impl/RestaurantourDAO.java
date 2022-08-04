@@ -33,6 +33,6 @@ public class RestaurantourDAO {
 	}
 	public List<RestaurantourVO> getRestaurantourList (RestaurantourVO rvo) {
 		System.out.println("getResList 기능 처리중");
-		return mybatis.selectList("BoardDAO.getBoardList", rvo);
+		return mybatis.selectList("RestaurantourDAO.getRestautrantourList", rvo);
 	}
 }

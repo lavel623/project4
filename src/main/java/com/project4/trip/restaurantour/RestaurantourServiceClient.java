@@ -1,18 +1,22 @@
 package com.project4.trip.restaurantour;
 
-import org.springframework.context.support.AbstractApplicationContext;
-import org.springframework.context.support.GenericXmlApplicationContext;
+import com.project4.trip.restaurantour.impl.RestaurantourDAO;
 
 
 public class RestaurantourServiceClient {
 	public static void main(String[] args) {
-		AbstractApplicationContext container = 
-				new GenericXmlApplicationContext("allicationContext.xml");
-		
-		RestaurantourService retaurantService = 
-				(RestaurantourService) container.getBean("restaurantService");
+		RestaurantourDAO rdao = new RestaurantourDAO();
 		
 		RestaurantourVO rvo = new RestaurantourVO();
+		rvo.setDivision(1);
+		rvo.setRegion("테스트 지역");
+		rvo.setLocation("테스트 주소");
+		rvo.setMarketname("테스트 이름");
+		rvo.setExplanation("테스트 설명");
+		
+		rdao.insertRestaurantour(rvo);
+		
+		
 		
 	}
 }
