@@ -27,6 +27,10 @@ public class LoginController {
 			throw new IllegalArgumentException("ID를 입력해주세요.");
 		}
 		
+		if(vo.getPw() == null || vo.getPw().equals("")) {
+			throw new IllegalArgumentException("비밀번호를 입력해주세요.");
+		}
+		
 		UserVO user = userDAO.getUser(vo);
 		
 		if(user != null) {
