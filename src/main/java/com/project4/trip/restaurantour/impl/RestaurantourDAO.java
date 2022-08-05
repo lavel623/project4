@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import com.project4.trip.restaurantour.RestaurantourVO;
 
-@Repository
+@Repository("restaurantourDAO")
 public class RestaurantourDAO {
 	
 	@Autowired

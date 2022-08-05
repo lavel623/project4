@@ -13,7 +13,7 @@ import com.project4.trip.user.impl.UserDAO;
 public class LoginController {
 	
 	@RequestMapping(value="/login.do", method=RequestMethod.GET)
-	public  String loginView(UserVO vo) {
+	public String loginView(UserVO vo) {
 		System.out.println("로그인 인증 처리 중");
 		vo.setId("raid");
 		vo.setPw("1234");
