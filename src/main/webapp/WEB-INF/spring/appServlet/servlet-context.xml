@@ -21,7 +21,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.project4.trip" />
+	<context:component-scan base-package="com.springquick.board" />
 	
 	
 	
