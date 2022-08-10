@@ -5,6 +5,8 @@ message.user.login.password=비밀번호
 message.user.login.loginBtn=로그인
 message.user.login.signinBtn=회원가입
 
+message.user.logout.alert.resign=회원탈퇴에 성공했습니다.
+
 message.user.login.language.en=영어
 message.user.login.language.ko=한글
 

@@ -140,7 +140,7 @@
 		
 	</div>
 		<h1>글 등록</h1>
-		<a href="logout_proc.jsp">Log-out</a>
+		<a href="logout.do">Log-out</a>
 	
 		<!-- <form action="insertBoard_proc.jsp" method="post"> -->
 		<form id="secondsec" action="insertBoard.do" method="post" enctype="multipart/form-data">

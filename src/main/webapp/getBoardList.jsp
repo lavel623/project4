@@ -143,6 +143,9 @@
 		</h3>
 		<!-- 검색 시작 -->
 		<!-- <form action="getBoardList.jsp" method="post"> -->
+		
+	<div class="mainWrap">
+      <div class="search">
 		<form action="getBoardList.do" method="post">
 			<table border="1" cellpadding="0" cellspacing="0" width="700">
 				<tr>
@@ -159,6 +162,8 @@
 				</tr>
 			</table>
 		</form>
+	  </div>
+	</div>
 		<!-- 검색 종료 -->
 		<table border="1" cellpadding="0" cellspacing="0" width="700">
 			<tr>
