@@ -132,8 +132,8 @@
 	<center>
 		<h1>글 상세</h1>
 		<a href="logout.do">Log-out</a>
-		<hr>
-		<form action="updateBoard.do" method="post">
+	
+		<form action="updateBoard.do" method="post" id="secondsec">
 			<input name="seq" type="hidden" value="${board.seq}" />
 			<table border="1" cellpadding="0" cellspacing="0">
 				<tr>
@@ -164,10 +164,11 @@
 				</tr>
 			</table>
 		</form>
-		<hr>
-		<a href="insertBoard.jsp">글등록</a>&nbsp;&nbsp;&nbsp;
-		<a href="deleteBoard.do?seq=${board.seq}">글삭제</a>&nbsp;&nbsp;&nbsp;
-		<a href="getBoardList.do">글목록</a>
+		<div id="thirdsec">
+		<a href="insertBoard.jsp" id="region1">글등록</a>&nbsp;&nbsp;&nbsp;
+		<a href="deleteBoard.do?seq=${board.seq}" id="region2">글삭제</a>&nbsp;&nbsp;&nbsp;
+		<a href="getBoardList.do" id="region3">글목록</a>
+		</div>
 	</center>
 </body>
 </html>

@@ -17,6 +17,7 @@ db.properties
 .classpath
 MANIFEST.MF
 pom.properties
+JDBCUtil.java
 
 # External tool builders
 .externalToolBuilders/
