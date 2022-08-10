@@ -16,7 +16,14 @@
 	html {
 		font-size: 92.5%;
 	}
+	
+	#firstdiv {
+	}
 
+	#seconddiv {
+		margin: 0 auto;
+	}
+	
 	#firstsec {
 		margin: 0 auto;
 		margin-top: 2%;
@@ -24,6 +31,7 @@
 		height: 150px;
 		background-color:pink
 	}
+	
 
 	#logo {
 		margin: 0 auto;
@@ -60,8 +68,12 @@
 	#secondsec {
 		margin: 3% auto;
 		max-width: 116.8rem;
-		height: 150px;
+		
 		clear: left
+	}
+	
+	#maintable {
+		margin: 0 auto;
 	}
 
 	#choice {
@@ -74,45 +86,8 @@
 		float: left
 	}
 
-	#region1 {
-		margin-left: 15%;
-		margin-top: 2%;
-		width: 21%;
-		height: 100px;
-		float: left
-	}
-
-	#region2 {
-		margin-left: 0%;
-		margin-top: 2%;
-		width: 21%;
-		height: 100px;
-		float: left
-	}
-
-	#region3 {
-		margin-left: 0%;
-		margin-top: 2%;
-		width: 21%;
-		height: 100px;
-		float: left
-	}
-
-	#region4 {
-		margin-left: 0%;
-		margin-top: 2%;
-		width: 10%;
-		border: 1px solid #000;
-		height: 100px;
-		float: left
-	}
-
-	#region5 {
-		margin-left: 0%;
-		margin-top: 2%;
-		width: 10%;
-		border: 1px solid #000;
-		height: 100px;
+	#region {
+		
 		float: left
 	}
 
@@ -123,52 +98,62 @@
 		height: 2000px;
 		clear: left;
 	}
+	
+	#listsec {
+		display: flex;
+ 		justify-content: space-between;
+	}
 
 	</style>
 
 <title>글 상세</title>
 </head>
 <body>
-	<center>
-		<h1>글 상세</h1>
-		<a href="logout.do">Log-out</a>
-	
-		<form action="updateBoard.do" method="post" id="secondsec">
-			<input name="seq" type="hidden" value="${board.seq}" />
-			<table border="1" cellpadding="0" cellspacing="0">
-				<tr>
-					<td bgcolor="orange" width="70">제목</td>
-					<td align="left"><input name="title" type="text"
-						value="${board.title}" /></td>
-				</tr>
-				<tr>
-					<td bgcolor="orange">작성자</td>
-					<td align="left">${board.writer}</td>
-				</tr>
-				<tr>
-					<td bgcolor="orange">내용</td>
-					<td align="left"><textarea name="content" cols="40" rows="10">
-						${board.content}</textarea></td>
-				</tr>
-				<tr>
-					<td bgcolor="orange">등록일</td>
-					<td align="left">${board.regDate}</td>
-				</tr>
-				<tr>
-					<td bgcolor="orange">조회수</td>
-					<td align="left">${board.seq}</td>
-				</tr>
-				<tr>
-					<td colspan="2" align="center"><input type="submit"
-						value="글 수정" /></td>
-				</tr>
-			</table>
-		</form>
-		<div id="thirdsec">
-		<a href="insertBoard.jsp" id="region1">글등록</a>&nbsp;&nbsp;&nbsp;
-		<a href="deleteBoard.do?seq=${board.seq}" id="region2">글삭제</a>&nbsp;&nbsp;&nbsp;
-		<a href="getBoardList.do" id="region3">글목록</a>
+	<div id="firstdiv">
+		<section id="firstsec">
+			<h1 style="margin-left:50%; text-align:center; display:inline-block">글 상세</h1>
+			<h1 style="margin-right:10px; margin-top:10px; float:right"><a href="logout.do">Log-out</a></h1>
+		</section>
+		<div id="seconddiv">
+			<form action="updateBoard.do" method="post" id="secondsec">
+				<input name="seq" type="hidden" value="${board.seq}" />
+				<table id="maintable" border="1" cellpadding="0" cellspacing="0">
+					<tr>
+						<td bgcolor="orange" width="70">제목</td>
+						<td align="left"><input name="title" type="text"
+							value="${board.title}" /></td>
+					</tr>
+					<tr>
+						<td bgcolor="orange">작성자</td>
+						<td align="left">${board.writer}</td>
+					</tr>
+					<tr>
+						<td bgcolor="orange">내용</td>
+						<td align="left"><textarea name="content" cols="40" rows="10">
+							${board.content}</textarea></td>
+					</tr>
+					<tr>
+						<td bgcolor="orange">등록일</td>
+						<td align="left">${board.regDate}</td>
+					</tr>
+					<tr>
+						<td bgcolor="orange">조회수</td>
+						<td align="left">${board.seq}</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center"><input type="submit"
+							value="글 수정" /></td>
+					</tr>
+				</table>
+			</form>
 		</div>
-	</center>
+		<div id="thirdsec">
+		<section id="listsec" style="width: 30%; height:20%; margin: 0 auto;">
+			<h1 style="float:left"><a href="insertBoard.jsp" id="region">글등록</a></h1>
+			<h1 style="float:left"><a href="deleteBoard.do?seq=${board.seq}" id="region">글삭제</a></h1>
+			<h1 style="float:left"><a href="getBoardList.do" id="region">글목록</a></h1>
+		</div>
+		</section>
+	</div>
 </body>
 </html>

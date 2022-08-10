@@ -150,7 +150,7 @@
 				</tr>
 				<tr>
 					<td bgcolor="orange">작성자</td>
-					<td align="left"><input type="text" value="${sessionid}" name="writer" size="10" readonly /></td>
+					<td align="left"><input type="text" value="${userId}" name="writer" size="10" readonly /></td>
 				</tr>
 				<tr>
 					<td bgcolor="orange">내용</td>

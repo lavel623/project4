@@ -38,6 +38,7 @@ public class LoginController {
 		//if (userDAO.getUser(vo) != null) {
 		if (user != null) {
 			session.setAttribute("userName", user.getName());
+			session.setAttribute("userId", user.getId());
 			return "getBoardList.do";
 		}
 		else return "login.jsp";
