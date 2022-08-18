@@ -138,7 +138,7 @@
 					</tr>
 					<tr>
 						<td bgcolor="orange">조회수</td>
-						<td align="left">${board.seq}</td>
+						<td align="left">${board.cnt}</td>
 					</tr>
 					<tr>
 						<td colspan="2" align="center"><input type="submit"

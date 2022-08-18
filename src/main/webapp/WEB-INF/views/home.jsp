@@ -1,7 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" pageEncoding="UTF-8"%>
-<%@ page import="com.springquick.board.BoardServiceClient"%>
-<%@ page import="com.springquick.user.UserServiceClient" %>
 
 <html>
 <head>
