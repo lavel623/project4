@@ -42,6 +42,10 @@
 	    	<param-name>contextConfigLocation</param-name>
 			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
 	    </init-param>
+	    <init-param>
+	    	<param-name>throwExceptionIfNoHandlerFound</param-name>
+	    	<param-value>true</param-value>
+	    </init-param>
 	    <load-on-stratup>1</load-on-stratup>
 	  </servlet>
 	  <servlet-mapping>
