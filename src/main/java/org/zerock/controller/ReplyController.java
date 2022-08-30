@@ -22,7 +22,7 @@ import lombok.extern.log4j.Log4j;
 @RequestMapping("/replies")
 @RestController
 @Log4j
-@AllArgsConstructor
+@AllArgsConstructor // 모든 변수를 파라미터로 받는 생성자를 만드는 어노테이션
 public class ReplyController {
 	
 	private ReplyService service;
